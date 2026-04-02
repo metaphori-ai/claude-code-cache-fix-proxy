@@ -139,8 +139,38 @@ The modified request is then forwarded to Anthropic's API normally. The response
 ## Notes
 
 - The proxy also dumps request/response pairs to a `claude-logs/` directory for debugging (you can remove this if you don't need it)
-- The `DUMP_DIR` path in `fix_cache_addon.py` is hardcoded -- update it to your preferred location or remove the dump functionality
 - This fix addresses the client-side request structure only. Anthropic could fix this in Claude Code directly by stabilizing the system-reminder injection and adding the missing cache breakpoint
+
+---
+
+## Built into ClaudeFu
+
+<p align="center">
+  <img src="assets/claudefu-logo.png" alt="ClaudeFu Logo" width="400">
+</p>
+
+<p align="center">
+  <strong>Multi-Claude Code Orchestration Desktop App</strong>
+</p>
+
+This cache fix is also built directly into [ClaudeFu](https://github.com/metaphori-ai/claudefu) -- a desktop app for managing multiple Claude Code CLI instances from a unified interface with inter-agent communication, plan review, permission control, and real-time session monitoring.
+
+In ClaudeFu, the proxy runs automatically -- no manual setup required.
+
+<p align="center">
+  <img src="assets/cache-fix/cache-fix-1.jpg" alt="ClaudeFu Cache Fix" width="700">
+  <img src="assets/cache-fix/cache-fix-2.jpg" alt="ClaudeFu Cache Fix" width="700">
+  <img src="assets/cache-fix/cache-fix-3.jpg" alt="ClaudeFu Cache Fix" width="700">
+  <img src="assets/cache-fix/cache-fix-4.jpg" alt="ClaudeFu Cache Fix" width="700">
+</p>
+
+<p align="center">
+  <em>ClaudeFu is an independent open source project and is not affiliated with, endorsed by, or sponsored by Anthropic, PBC.<br/>
+  "Claude" and related marks are trademarks of Anthropic.<br/>
+  This application requires a working <a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code CLI</a> installation.</em>
+</p>
+
+---
 
 ## License
 
