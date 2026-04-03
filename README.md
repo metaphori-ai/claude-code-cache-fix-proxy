@@ -136,16 +136,6 @@ Claude Code's API requests to `/v1/messages` include a `messages` array. The pro
 
 The modified request is then forwarded to Anthropic's API normally. The response is passed back unmodified.
 
-## Update: Fixed in Claude Code 2.1.90+
-
-Anthropic has fixed this cache invalidation issue in Claude Code version 2.1.90. If you're on that version or later, you no longer need this proxy for the cache fix. Upgrade with:
-
-```bash
-npm update -g @anthropic-ai/claude-code
-```
-
-The proxy is still useful if you want to **inspect Claude Code's API requests and responses** -- it dumps all request/response pairs to `claude-logs/` for debugging and analysis.
-
 ## Notes
 
 - The proxy dumps request/response pairs to a `claude-logs/` directory for debugging
